@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>DevOpsDays London: Let’s talk about Security</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen.css">
+</head>
+<body class="list">
+	<style>
+#Cover p.author {font-size: 200%;}
+</style>
+	<header class="caption">
+		<h1>DevOpsDays London: Let’s talk about Security</h1>
+		<p>Justin Cormack</p>
+	</header>
+	<section class="slide cover" id="Cover"><div>
+		<h2>DevOpsDays London: Let’s talk about Security</h2>
+		<p>Justin Cormack</p>
+		<img src="pictures/steampowerstation.jpg" alt="" width="100%">
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+		<style>
+			#Cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#Cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#Cover p a {
+					color:#FFF;
+					}
+				a.linked { text-decoration: none; color: #fff; border: none;}
+                span.strike { text-decoration: line-through;}
+                .pic img { max-width:90%; height:90%; max-height: 90%;}
+                .pic a { text-decoration: none; color: #fff;}
+				.shiftimage { position: relative; top: -40px; left: 100px;}
+				.floatimage { float: right;}
+		</style>
+	</div></section>
+
+<section class="slide">
+<div>
+<h2>Justin Cormack</h2>
+<p>Cambridge based developer at Docker <a href="https://twitter.com/justincormack">@justincormack</a>
+<br/>&nbsp;
+	<img src="pictures/vector_h.svg" alt="" width="100%">
+</div>
+</section>
+
+<section class="slide">
+<div>
+<p>Co-author of <a href="https://www.safaribooksonline.com/library/view/docker-in-the/9781939902184/">Docker in the Trenches: Successful Production Deployment</a>
+<!--br/>
+50% discount code <a href="https://gum.co/lQGH/softwarecircus">https://gum.co/lQGH/softwarecircus</a-->
+<br/>
+<a href="https://www.safaribooksonline.com/library/view/docker-in-the/9781939902184/" class="linked"><img src="pictures/docker_cover.png" width="40%"/></a>
+</div>
+</section>
+
+<section class="slide shout">
+<div>
+<h2>The Conversation</h2>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<h2>Ops “please, developers, can you write secure code?”</h2>
+<h2>Devs “please, ops, can you secure the environment for our code?”</h2>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<h2>DevOps “This service needs to do these things and access these other services”</h2>
+<h2>DevOps “Ok, I will restrict its access in test and production to those actions”</h2>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<h2>To get to this we need a domain specific manifest of types of actions a program can do, and a way to restrict it to just these.</h2>
+<h2>We want defence in depth &ndash; a single way of imposing restrictions only needs a single circumvention.</h2>
+</div>
+</section>
+
+<section class="slide shout">
+<div>
+<h2>Examples</h2>
+</div>
+</section>
+
+<section class="slide pic">
+<div>
+<a href="https://www.android.com/">
+<img src="pictures/android.svg"/>
+</a>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<h2>Android permissions and intents were a good early model</h2>
+<ul>
+<li>Certainly conversational...
+<li>Good apart from the bit where the user clicks “Allow”
+</ul>
+</div>
+</section>
+
+<section class="slide pic">
+<div>
+<a href="http://openbsd.org/">
+<img src="pictures/puffy.gif"/>
+</a>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<h2><code>pledge(2)</code></h2>
+<ul>
+<li>System call to reduce ability to do things, grouped into different classes
+<li>stdio
+rpath
+wpath
+cpath
+dpath
+tmppath
+fattr
+flock
+inet
+dns
+unix
+sendfd
+recvfd
+proc
+getpw
+tty
+ioctl
+prot_exec
+exec
+settime
+ps
+vminfo
+id
+pf
+audio
+</ul>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<h2>Usability</h2>
+<ul>
+<li>Within 6 months it had been introduced to over 400 programs
+<li>Not a typical coding community,
+<li>There are only 8000 SELinux profiles on github after 18 years, and most are the same ones.
+</ul>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+<section class="slide">
+<div>
+<h2>Questions?</h2>
+<ul>
+<li><a href="https://twitter.com/justincormack">@justincormack</a>
+<li>justin.cormack@docker.com
+<p>&nbsp;
+	<img src="pictures/vector_h.svg" alt="" width="100%"/>
+</div>
+</section>
+
+
+	<p class="badge"><a href="https://github.com/justincormack/devopsdays2016">Fork me on Github</a></p>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+</html>
