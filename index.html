@@ -166,14 +166,75 @@ audio
 <h2>Usability</h2>
 <ul>
 <li>Within 6 months it had been introduced to over 400 programs
-<li>Not a typical coding community,
+<li>Not a typical coding community, true
+<li>Not the sole means of defence, adds defence in depth.
 <li>There are only 8000 SELinux profiles on github after 18 years, and most are the same ones.
+</ul>
+</div>
+</section>
+
+<section class="slide shout">
+<div>
+<h2>Doesn‘t Apply to Me</h2>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<ul>
+<li>Probably you are not writing Unix commands for OpenBSD
+<li>Some of the specifics are less of a concern
+<li>However, microservices are modelled on the Unix process model
+</ul>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<h2>Content Security Policy for Web Applications</h2>
+<ul>
+<li>Content headers for browsers limiting actions, defines none, urls or local only, or similar
+<li>default-src
+script-src
+object-src
+style-src
+img-src
+media-src
+frame-src
+font-src
+connect-src
+form-action
+sandbox
+script-nonce
+plugin-types
+reflected-xss
+report-uri
+<li><a href="http://w3c.github.io/webappsec-csp/">http://w3c.github.io/webappsec-csp/</a>
+<li><a href="https://diogomonica.com/2015/12/30/deep-into-csp/">Creating a CSP Policy from Scratch</a>
 </ul>
 </div>
 </section>
 
 
 
+<section class="slide shout">
+<div>
+<h2>Containers</h2>
+</div>
+</section>
+
+<section class="slide">
+<div>
+<h2>Docker supports lots of security mechanisms</h2>
+<ul>
+<li>Tries to provide sane defaults
+<li>Lets you override defaults
+<li>Namespaces, capabilities, SELinux, Apparmor, seccomp, iptables, networks
+<li>Not based on any specifics of your application though.
+<li>All disconnected from each other.
+</ul>
+</div>
+</section>
 
 
 
