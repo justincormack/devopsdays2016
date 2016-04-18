@@ -46,6 +46,7 @@
                 .pic a { text-decoration: none; color: #fff;}
 				.shiftimage { position: relative; top: -40px; left: 100px;}
 				.floatimage { float: right;}
+				pre.small { font-size: 60%;}
 		</style>
 	</div></section>
 
@@ -163,6 +164,17 @@ audio
 
 <section class="slide">
 <div>
+<pre>
+<code>if (pledge("stdio rpath wpath cpath", NULL) == -1) {</code>
+<code>  perror("pledge");</code>
+<code>  exit(2);</code>
+<code>}</code>
+</pre>
+</div>
+</section>
+
+<section class="slide">
+<div>
 <h2>Usability</h2>
 <ul>
 <li>Within 6 months it had been introduced to over 400 programs
@@ -175,7 +187,7 @@ audio
 
 <section class="slide shout">
 <div>
-<h2>Doesn‘t Apply to Me</h2>
+<h2>Doesn’t Apply to&nbsp;Me</h2>
 </div>
 </section>
 
@@ -183,6 +195,7 @@ audio
 <div>
 <ul>
 <li>Probably you are not writing Unix commands for OpenBSD
+<li>Very domain specific rules eg exactly which files can be read
 <li>Some of the specifics are less of a concern
 <li>However, microservices are modelled on the Unix process model
 </ul>
@@ -215,7 +228,23 @@ report-uri
 </div>
 </section>
 
-
+<section class="slide">
+<div>
+<pre class="small">
+<code>Content-Security-Policy</code>
+<code>	"default-src 'none';</code>
+<code>	script-src 'self' https://www.google-analytics.com/;</code>
+<code>	style-src 'self' https://fonts.googleapis.com;</code>
+<code>	font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;</code>
+<code>	frame-src 'self' https://www.slideshare.net;</code>
+<code>	upgrade-insecure-requests; block-all-mixed-content;</code>
+<code>	reflected-xss block; referrer no-referrer-when-downgrade;</code>
+<code>	frame-ancestors 'none'; form-action 'none';</code>
+<code>	base-uri diogomonica.com www.diogomonica.com;</code>
+<code>	report-uri https://report-uri.io/report/59e303e8e117668e8e166508913a6d1d;"</code>
+</pre>
+</div>
+</section>
 
 <section class="slide shout">
 <div>
@@ -237,6 +266,24 @@ report-uri
 </section>
 
 
+<!--- ideas for this-->
+
+
+
+
+<section class="slide">
+<div>
+<h2>Summarising</h2>
+<ul>
+<li>Talk about what your application needs to <!DOCTYPE html>
+<li>Human readable and understandable
+<li>Machine readable and understandable.
+<li>Declarative
+<li>Domain specific
+<li>Talk!
+</ul>
+</div>
+</section>
 
 
 
