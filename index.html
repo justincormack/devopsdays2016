@@ -71,7 +71,19 @@
 
 <section class="slide shout">
 <div>
-<h2>The Conversation</h2>
+<h2>Let’s talk about Security</h2>
+</div>
+</section>
+
+<section class="slide shout">
+<div>
+<h2>Security “NO!”</h2>
+</div>
+</section>
+
+<section class="slide shout">
+<div>
+<h2>A Conversation</h2>
 </div>
 </section>
 
@@ -252,15 +264,46 @@ report-uri
 </div>
 </section>
 
+<!--
+
+Add: lots of security in Docker, people do not realise. But not very easy to customise.
+Shouldnt not use docker for security reasons.
+
+Most people use thde defaults, so we have spent a lot of time on making them good.
+
+
+
+security "Wall of No" Joanne said earlier
+ -->
+
 <section class="slide">
 <div>
 <h2>Docker supports lots of security mechanisms</h2>
 <ul>
-<li>Tries to provide sane defaults
-<li>Lets you override defaults
-<li>Namespaces, capabilities, SELinux, Apparmor, seccomp, iptables, networks
-<li>Not based on any specifics of your application though.
-<li>All disconnected from each other.
+<li>Namespaces, capabilities, SELinux, Apparmor, seccomp, iptables, networks (Linux likes different security subsystems)
+<li>The defaults are really good, and work for almost everyone
+<li>Containers are a very secure environment to run code.
+</ul>
+</div>
+</section>
+
+<section class="slide">
+<div>
+	<h2>Not so friendly</h2>
+<pre>
+<code>{"name": "accept4", "action": "SCMP_ACT_ALLOW", "args": []},</code>
+<code>deny @{PROC}/sys/kernel/{?,??,[^s][^h][^m]**} w,</code>
+<code>docker run --cap-drop=sys_admin</code>
+</div>
+</section>
+
+section class="slide">
+<div>
+<h2>Next steps</h2>
+<ul>
+<li>Make the customisation easier for your use cases
+<li>Increase uniformity
+<li>Correlate the different types of option, so set different options in lockstep
 </ul>
 </div>
 </section>
@@ -272,26 +315,31 @@ report-uri
 <li>Client, server, or both
 <li>Connects to specified hosts outside local network
 <li>May not connect to certain types of host (finance, production)
-<li>Correlate the different types of option, so set capabilties and seccomp together
-<li>Document clearly
+<li>Must use encrypted connections to these hosts
+<li>Document clear contracts about what is allowed
 </ul>
 </div>
 </section>
 
 <section class="slide">
 <div>
-<h2>Summarising</h2>
+<h2>Summary</h2>
 <ul>
-<li>Talk about what your application needs to do
+<li>First talk about what your application needs to do
 <li>Human readable and understandable
-<li>Machine readable and understandable.
+<li>Machine readable, testable and debuggable.
 <li>Declarative
 <li>Domain specific
-<li>Talk!
 </ul>
 </div>
 </section>
 
+
+<section class="slide shout">
+<div>
+<h2>Talk!</h2>
+</div>
+</section>
 
 
 
@@ -301,6 +349,7 @@ report-uri
 <ul>
 <li><a href="https://twitter.com/justincormack">@justincormack</a>
 <li>justin.cormack@docker.com
+<li><code>docker pull justincormack/devopsdays2016</code>
 <p>&nbsp;
 	<img src="pictures/vector_h.svg" alt="" width="100%"/>
 </div>
