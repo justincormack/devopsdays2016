@@ -1,7 +1,7 @@
-FROM justincormack/debian
+FROM alpine
 
 COPY . /src
 
 EXPOSE 80
 
-CMD ["webfsd", "-p", "80", "-F", "-r", "/src", "-f", "index.html"]
+CMD ["httpd", "-f", "-h", "/src"]
