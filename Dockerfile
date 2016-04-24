@@ -4,4 +4,4 @@ COPY . /src
 
 EXPOSE 80
 
-CMD ["httpd", "-f", "-h", "/src"]
+CMD ["httpd", "-f", "-h", "/src", "-c", "/src/httpd.conf"]
